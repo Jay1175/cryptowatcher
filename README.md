@@ -31,6 +31,12 @@ Python 3.8.10
 pip --version
 pip 21.1.3 from C:\Users\YourName\Anaconda3\envs\cryptowatcher\lib\site-packages\pip (python 3.8)
 ```
+
+Finally, change your directory to the cryptowatcher directory.
+```cmd
+cd <path to the folder, something like C:\Users\Jay\Desktop\cryptowatcher>
+```
+
 Finish up by installing the packages with pip at the beginning of this section.
 
 ## Usage
