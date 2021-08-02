@@ -4,38 +4,46 @@ Cryptowatcher is a discord.py script you must run with your own bot account. It 
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install required packages.
+Use the package manager to install required packages.
 
 ```bash
 pip install -r requirements.txt
 ```
 
-**Need help installing and using python? I recommend using [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/windows.html) if on windows to create a virtual environment specifically for this bot.**
+**Need help installing and using python?** Follow these steps below.
 
-After installing conda, create an environment
+If you're on windows, I recommend using [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/windows.html) to create a python environment specific to this bot instead of a direct install of python.
+
+After installing conda open it and create an environment
 
 ```cmd
-C:\discordbots\CryptoWatcher>conda create --name cryptowatcher python=3.8
+conda create --name cryptowatcher python=3.8
 ```
 Activate your new environment
 ```cmd
-C:\discordbots\CryptoWatcher>activate cryptowatcher
+conda activate cryptowatcher
 ```
 You should see your environment name at the far left of your command line, now verify your python installation and making sure you have pip:
 ```cmd
-(cryptowatcher) C:\discordbots\Cryptowatcher>python --version
+python --version
 Python 3.8.10
 
-(cryptowatcher) C:\discordbots\Cryptowatcher>pip --version
+pip --version
 pip 21.1.3 from C:\Users\YourName\Anaconda3\envs\cryptowatcher\lib\site-packages\pip (python 3.8)
 ```
-Finish up by installing the packages with pip.
+Finish up by installing the packages with pip at the beginning of this section.
 
 ## Usage
 
-Copy config.json.example to config.json. In config.json, fill out each line with the appropriate data. It should look similar to the example below:
+Make a copy config.json.example and rename it to config.json. Open it up with notepad or whatever you use and fill out each line with the appropriate data. It should look similar to the example below.
 
-```json
+Autoscrape can be set to "eth", "btc", or "doge". If it isn't set to one of these values, it will default to ethereum.
+
+autoscrape_time_minutes should be set to a reasonable number of minutes. It defaults to 360, or every 6 hours.
+
+*Note - this is an example file, your token and channel ID will be different. See below if you need help finding them.*
+
+```bash
 {
     "token":"aBcdEfGhijKlMnoPQRstuVwXYZ0123456789",
     "autoscrape":"eth"
@@ -44,20 +52,18 @@ Copy config.json.example to config.json. In config.json, fill out each line with
 }
 ```
 
-Autoscrape can be set to "eth", "btc", or "doge". If it isn't set to one of these values, it will default to ethereum.
-
 Need help creating a bot and getting your token? Follow [this guide](https://www.writebots.com/discord-bot-token/).
 
 Need help finding your channel ID? Follow [this guide](https://www.remote.tools/remote-work/how-to-find-discord-id).
 
-Once your config.json file has been filled in and your pip packages are downloaded, run the bot.
+Once your config.json file has been filled in and your pip packages are downloaded, run the bot. If you have the config file set up correctly, it will show you what currency is being autoscraped and how often as well as what bot your token is tied to.
 
 ```python
-C:\discordbots\CryptoWatcher>python main.py
+python main.py
 Autoscraping ethereum every 360 minutes
 YourDiscordBotsName#0000 ready
 ```
-Now your bot should have automatically grabbed and reported a crypto price automatically.
+Now your bot should have automatically grabbed and reported a crypto price automatically to your desired discord channel.
 
 If you want an immediate update, you can get one.
 
