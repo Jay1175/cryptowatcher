@@ -1,6 +1,6 @@
 # CryptoWatcher
 
-Cryptowatcher is a discord.py script you must run with your own bot account. It tracks ethereum prices and will send them to a user defined channel on a user defined loop (default every 6 hours). It also lets you get ethereum, btc, and dogecoin prices on demand with !eth, !btc, and !doge respectively. Prices are in USD.
+Cryptowatcher is a discord.py script you must run with your own bot account. It automatically reports ethereum, bitcoin, or dogecoin prices on a user-set schedule to a user-set discord channel. You can also manually request all three coin's price on demand. Prices are in USD.
 
 ## Installation
 
