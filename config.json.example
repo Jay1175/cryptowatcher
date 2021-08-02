@@ -1,0 +1,5 @@
+{
+    "token":"token goes here",
+    "autoscrape_time_minutes":360,
+    "autoscrape_channel_ID":channel_id_goes_here
+}
